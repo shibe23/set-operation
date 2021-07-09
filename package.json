@@ -1,0 +1,20 @@
+{
+  "name": "json-set-operation",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "format": "prettier --write src/**/*.js",
+    "lint": "eslint --fix src/**/*.js",
+    "fix": "npm run format && npm run lint"
+  },
+  "keywords": [],
+  "author": "Shibe23 <shibe23.info@gmail.com> (https://github.com/shibe23)",
+  "license": "ISC",
+  "devDependencies": {
+    "eslint": "^7.30.0",
+    "eslint-config-prettier": "^8.3.0",
+    "jest": "^27.0.6",
+    "prettier": "^2.3.2"
+  }
+}
