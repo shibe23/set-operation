@@ -1,0 +1,11 @@
+// ESLint実行時にsrc/**/*.test.tsを読み込むための設定ファイル
+{
+  "extends": "./tsconfig.json",
+  "include": [
+    "./src/index.ts",
+    "./src/**/*.test.ts"
+  ],
+  "exclude": [
+    "./node_modules/",
+  ]
+}
