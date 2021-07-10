@@ -31,7 +31,7 @@ const b: Itest[] = [
   },
 ];
 
-const expectResult = [
+const expectDifference = [
   {
     name: "Bob",
     age: 23,
@@ -43,5 +43,5 @@ const expectResult = [
 ];
 
 test("差集合を求める", () => {
-  expect(difference<Itest>(a, b, "name")).toEqual(expectResult);
+  expect(difference<Itest>(a, b, "name")).toEqual(expectDifference);
 });
