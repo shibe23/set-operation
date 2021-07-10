@@ -1,11 +1,11 @@
 import { difference } from "./index";
 
-interface Itest {
+interface MockUser {
   name: string;
   age: number;
 }
 
-const a: Itest[] = [
+const a: MockUser[] = [
   {
     name: "Jack",
     age: 10,
@@ -16,7 +16,7 @@ const a: Itest[] = [
   },
 ];
 
-const b: Itest[] = [
+const b: MockUser[] = [
   {
     name: "Bob",
     age: 23,
@@ -43,5 +43,5 @@ const expectDifference = [
 ];
 
 test("差集合を求める", () => {
-  expect(difference<Itest>(a, b, "name")).toEqual(expectDifference);
+  expect(difference<MockUser>(a, b, "name")).toEqual(expectDifference);
 });
