@@ -3,13 +3,18 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
+  "types": "index.d.ts",
   "scripts": {
     "build": "tsc",
     "format": "prettier --write src/**/*.ts",
     "lint": "eslint --fix src/**/*.ts",
     "fix": "npm run format && npm run lint",
-    "test": "jest"
+    "test": "jest",
+    "prepack": "npm run build"
   },
+  "files": [
+    "dist"
+  ],
   "keywords": [],
   "author": "Shibe23 <shibe23.info@gmail.com> (https://github.com/shibe23)",
   "license": "ISC",
