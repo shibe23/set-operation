@@ -1,4 +1,4 @@
-import { difference } from "./index";
+import { difference, intersection } from "./index";
 
 interface MockUser {
   name: string;
@@ -23,17 +23,6 @@ const b: MockUser[] = [
   {
     name: "Tom",
     age: 38,
-  },
-  {
-    name: "Nancy",
-    age: 29,
-  },
-];
-
-const expectDifference = [
-  {
-    name: "Bob",
-    age: 23,
   },
   {
     name: "Nancy",
@@ -68,10 +57,38 @@ const errorObjB = [
   },
 ];
 
-test("ネストしたオブジェクトでは空配列を返す", () => {
-  expect(difference<MockErrorUser>(errorObjA, errorObjB, "name")).toEqual([]);
+describe("差集合", () => {
+  test("ネストしたオブジェクトでは空配列を返す", () => {
+    expect(difference<MockErrorUser>(errorObjA, errorObjB, "name")).toEqual([]);
+  });
+
+  test("差集合を求める", () => {
+    expect(difference<MockUser>(a, b, "name")).toEqual([
+      {
+        name: "Bob",
+        age: 23,
+      },
+      {
+        name: "Nancy",
+        age: 29,
+      },
+    ]);
+  });
 });
 
-test("差集合を求める", () => {
-  expect(difference<MockUser>(a, b, "name")).toEqual(expectDifference);
+describe("積集合", () => {
+  test("ネストしたオブジェクトでは空配列を返す", () => {
+    expect(intersection<MockErrorUser>(errorObjA, errorObjB, "name")).toEqual(
+      []
+    );
+  });
+
+  test("積集合を求める", () => {
+    expect(intersection<MockUser>(a, b, "name")).toEqual([
+      {
+        name: "Tom",
+        age: 38,
+      },
+    ]);
+  });
 });

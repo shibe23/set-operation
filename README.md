@@ -15,3 +15,11 @@ difference(a, b, "name")
 
 // [{name: "Bob",age: 23}, {name: "Nancy", age: 29}];
 ```
+
+## intersection()
+
+```typescript
+intersection(a, b, "name")
+
+// [{name: "Tom",age: 38}];
+```
