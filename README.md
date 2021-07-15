@@ -1,5 +1,11 @@
-# set-operation
+# set-operations
 Lightweight Set Operation Library for Objects in Array.
+
+# install
+
+```
+npm install @shibe23/set-operations
+```
 
 # Usage
 

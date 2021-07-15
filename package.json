@@ -1,5 +1,5 @@
 {
-  "name": "@shibe23/set-operation",
+  "name": "@shibe23/set-operations",
   "version": "0.0.1",
   "description": "Lightweight Set Operation Library for Objects in Array.",
   "main": "dist/index.js",
