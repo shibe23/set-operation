@@ -1,9 +1,9 @@
 {
-  "name": "set-operation",
+  "name": "@shibe23/set-operation",
   "version": "0.0.1",
-  "description": "",
-  "main": "index.js",
-  "types": "index.d.ts",
+  "description": "Lightweight Set Operation Library for Objects in Array.",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
   "scripts": {
     "build": "tsc",
     "format": "prettier --write src/**/*.ts",
@@ -17,7 +17,7 @@
   ],
   "keywords": [],
   "author": "Shibe23 <shibe23.info@gmail.com> (https://github.com/shibe23)",
-  "license": "ISC",
+  "license": "MIT",
   "devDependencies": {
     "@types/jest": "^26.0.24",
     "@typescript-eslint/eslint-plugin": "^4.28.2",
