@@ -30,6 +30,17 @@ const b: MockUser[] = [
   },
 ];
 
+const c: MockUser[] = [
+  {
+    name: "Kate",
+    age: 20,
+  },
+  {
+    name: "Sum",
+    age: 51,
+  },
+];
+
 interface MockErrorUser {
   name: {
     a: string;
@@ -58,6 +69,10 @@ const errorObjB = [
 ];
 
 describe("差集合", () => {
+  test("該当しない場合はtargetをそのまま返す", () => {
+    expect(difference<MockUser>(a, c, "name")).toEqual(c);
+  });
+
   test("ネストしたオブジェクトでは空配列を返す", () => {
     expect(difference<MockErrorUser>(errorObjA, errorObjB, "name")).toEqual([]);
   });
@@ -77,6 +92,10 @@ describe("差集合", () => {
 });
 
 describe("積集合", () => {
+  test("該当しない場合は空配列を返す", () => {
+    expect(intersection<MockUser>(a, c, "name")).toEqual([]);
+  });
+
   test("ネストしたオブジェクトでは空配列を返す", () => {
     expect(intersection<MockErrorUser>(errorObjA, errorObjB, "name")).toEqual(
       []
