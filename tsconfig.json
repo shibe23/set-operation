@@ -5,11 +5,10 @@
     "module": "commonjs",
     "strict": true,
     "removeComments": false,
-    "sourceMap": true,
-    "target": "es5",
-    "lib": ["dom", "es6"],
+    "target": "es6",
     "outDir": "./dist",
-    "declaration": true
+    "declaration": true,
+    "newLine": "lf"
   },
   "include": ["./src/index.ts"],
   "exclude": [
